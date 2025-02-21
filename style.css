@@ -233,35 +233,6 @@ body p h1 h5 h4 .text-button{
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Reverse layout for second section
-.about-section-reverse {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .about-section {
-        flex-direction: column;
-        text-align: left;
-    }
-
-    .reverse {
-        flex-direction: column;
-    }
-
-    .about-skills {
-        justify-content: flex-start;
-    }
-
-    .about-image img {
-        max-width: 250px;
-    }
-} */
-
-
-
-
 
 .projects-container {
     width: 100%;
@@ -413,8 +384,16 @@ button:hover {
 }
 
 .top-content {
-    font-size: 1.5rem; /* Slightly smaller text */
     color: #120101;
+}
+
+.top-content p{
+    color:#252425;
+}
+
+.top-content h5{
+    font-size: 1.2rem;
+    color: #333;
 }
 
 
