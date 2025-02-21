@@ -12,6 +12,11 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    overflow-x: hidden;
+}
+
+
 body p h1 h5 h4 .text-button{
     color: #252425;
 }
@@ -228,7 +233,7 @@ body p h1 h5 h4 .text-button{
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Reverse layout for second section */
+/* Reverse layout for second section
 .about-section-reverse {
     flex-direction: row-reverse;
     justify-content: space-between;
@@ -252,7 +257,7 @@ body p h1 h5 h4 .text-button{
     .about-image img {
         max-width: 250px;
     }
-}
+} */
 
 
 
@@ -477,15 +482,131 @@ a{
 
 
 
-   /* Default (Desktop) */
-.main-container { width: 100%; }
+   
+   /* Responsive Design */
 
-/* Tablet */
-@media (max-width: 1024px) {
-  .main-container { width: 90%; }
-}
-
-/* Mobile */
+/* Mobile (up to 768px) */
 @media (max-width: 768px) {
-  .main-container { width: 100%; flex-direction: column; }
+    /* Main container (ensure it stacks on small screens) */
+    .main-container {
+        width: 100%;
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+    /* Header - stack elements vertically */
+    .header-container {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .nav-contents {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    /* Buttons - adjust size on mobile */
+    .text-button {
+        font-size: 14px;
+        padding: 0.5rem 1rem;
+    }
+
+    .resume-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Hero section - adjust text and button */
+    .hero-container h3 {
+        font-size: 1.5rem;
+    }
+
+    .hero-container h1 {
+        font-size: 2rem;
+    }
+
+    .primary-button {
+        width: 100%;
+    }
+
+    /* About Section */
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 250px;
+    }
+
+    /* Skills and Tech Section */
+    .icons-text-div {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icons-text-div img {
+        width: clamp(40px, 5vw, 60px);
+    }
+
+    /* Projects Section */
+    .project-card {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .projects-container {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    /* Footer */
+    .footer-container {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .icons {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .divider-div {
+        width: 80%;
+    }
 }
+
+/* Tablet (up to 1024px) */
+@media (max-width: 1024px) {
+    .main-container {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    .hero-container h1 {
+        font-size: 2.2rem;
+    }
+
+    .primary-button {
+        width: fit-content;
+    }
+
+    /* About Section */
+    .about-text h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Skills Section */
+    .icons-text-div {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .project-card {
+        width: calc(50% - 1rem); /* Two per row */
+    }
+}
+
