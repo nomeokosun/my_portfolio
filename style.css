@@ -122,7 +122,7 @@ body p h1 h5 h4 .text-button{
 
 .hero-container h3{
     color: #959090;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 2rem;
 }
 
@@ -471,18 +471,19 @@ a{
         width: 100%;
         flex-direction: column;
         padding: 0 1rem;
+        
     }
 
     /* Header - stack elements vertically */
     .header-container {
-        flex-direction: column;
+        flex-direction: row;
         gap: 1rem;
         align-items: center;
         text-align: center;
     }
 
     .nav-contents {
-        flex-direction: column;
+        flex-direction: row;
         gap: 0.5rem;
     }
 
@@ -499,11 +500,11 @@ a{
 
     /* Hero section - adjust text and button */
     .hero-container h3 {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .hero-container h1 {
-        font-size: 2rem;
+        font-size: 0.5rem;
     }
 
     .primary-button {
@@ -511,19 +512,32 @@ a{
     }
 
     /* About Section */
+
+    .about-container{
+        width: 100%;
+        padding-top: 0.5rem;
+        padding-bottom: 1rem;
+    }
     .about-section {
         flex-direction: column;
-        text-align: center;
+        text-align: center; 
+        font-size: 0.5rem;
     }
 
     .about-image img {
-        max-width: 250px;
+        max-width: 100%;
     }
 
     /* Skills and Tech Section */
+
+    .skills-n-tech{
+        width: fit-content;
+    }
+
     .icons-text-div {
+        width: fit-content;
         flex-direction: column;
-        align-items: center;
+        align-items: start;
     }
 
     .icons-text-div img {
@@ -531,6 +545,12 @@ a{
     }
 
     /* Projects Section */
+
+    .cards{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    
     .project-card {
         width: 100%; /* Full width on mobile */
     }
@@ -585,7 +605,7 @@ a{
     }
 
     .project-card {
-        width: calc(50% - 1rem); /* Two per row */
+        width: 100%; /* Two per row */
     }
 }
 
